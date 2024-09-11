@@ -4,7 +4,8 @@ import { handleAsyncTryCatch } from '../../utlis/tryCatch.utlis';
 
 // add form
 const addForm = handleAsyncTryCatch(async (req, res) => {
-  const result = await formServices.addForm();
+  console.log(req.body);
+  const result = await formServices.addForm(req.body);
   handleSendResposne(res, {
     statusCode: httpStatus.OK,
     success: true,
