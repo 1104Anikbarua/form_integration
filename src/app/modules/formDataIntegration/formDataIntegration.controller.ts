@@ -6,9 +6,9 @@ import { handleAsyncTryCatch } from '../../utlis/tryCatch.utlis';
 const addForm = handleAsyncTryCatch(async (req, res) => {
   // console.log(req.body);
   const formData = req.body;
-  if (!formData || !formData.answer || !formData.answer.answers) {
-    throw new Error('Missing required form data');
-  }
+  // if (!formData || !formData.answer || !formData.answer.answers) {
+  //   throw new Error('Missing required form data');
+  // }
   // Process the form data (example)
   const answers = formData?.answer?.answers;
   // answers.forEach((answer) => {
