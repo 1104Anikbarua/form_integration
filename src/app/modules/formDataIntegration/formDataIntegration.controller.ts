@@ -9,7 +9,7 @@ const addForm = handleAsyncTryCatch(async (req, res) => {
   handleSendResposne(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: '',
+    message: 'Result retrieve successfully',
     data: result,
   });
 });

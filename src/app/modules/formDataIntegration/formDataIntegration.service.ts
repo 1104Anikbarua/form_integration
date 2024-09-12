@@ -1,5 +1,6 @@
 const addForm = async (payload: any) => {
-  return { payload };
+  const message = 'Recieved the data';
+  return { payload, message };
 };
 const formServices = {
   addForm,
