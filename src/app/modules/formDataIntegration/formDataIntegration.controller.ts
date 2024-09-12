@@ -17,7 +17,7 @@ const addForm = handleAsyncTryCatch(async (req, res) => {
   const formName = answers[0]?.t;
   // const isActive=answers[1].
   console.log(formName);
-  const result = await formServices.addForm(formName);
+  const result = await formServices.addForm(answers);
   handleSendResposne(res, {
     statusCode: httpStatus.OK,
     success: true,
