@@ -1,10 +1,31 @@
-const addForm = async (payload: any) => {
+const addForm = async (payload: any[]) => {
   const answers = payload;
-  const formName = answers[0]?.t;
+  // const formName = answers[0]?.t;
   const isActive = answers[1]?.c[0]?.t;
-  console.log(formName, isActive);
-  return { formName, isActive };
+  console.log(isActive);
+  return {
+    // formName,
+    isActive,
+  };
 };
 const formServices = {
   addForm,
 };
+
+interface IAnswers {
+  answer: [
+    {
+      q: string;
+      t: string;
+    },
+    {
+      q: string;
+      c: [
+        {
+          t: string;
+          v: string;
+        },
+      ];
+    },
+  ];
+}
