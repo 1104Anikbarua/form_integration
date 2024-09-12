@@ -10,11 +10,11 @@ const addForm = handleAsyncTryCatch(async (req, res) => {
     throw new Error('Missing required form data');
   }
   // Process the form data (example)
-  const answers = formData.answer.answers;
+  const answers = formData?.answer?.answers;
   // answers.forEach((answer) => {
   //   console.log(`Question ID: ${answer.q}, Answer: ${answer.t || answer.c}`);
   // });
-  const formName = answers[0].t;
+  const formName = answers[0]?.t;
   // const isActive=answers[1].
   console.log(formName);
   const result = await formServices.addForm(formName);
